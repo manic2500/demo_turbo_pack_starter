@@ -1,0 +1,30 @@
+{
+    //"extends": "../../tsconfig.json", // Extend your root tsconfig if you have one
+    "compilerOptions": {
+        // --- Project Reference Requirements ---
+        "composite": true, // **REQUIRED:** Allows this project to be referenced.
+        "declaration": true, // **RECOMMENDED:** Generates .d.ts files for type checking in consuming packages.
+        "declarationMap": true, // Generates source maps for declarations.
+        // --- Output Configuration ---
+        "rootDir": "./src", // **REQUIRED:** Points to the directory with your source files.
+        "outDir": "./dist", // **REQUIRED:** Where the compiled JavaScript and types will be placed.
+        // --- Standard TypeScript Options ---
+        "module": "NodeNext", // Matches the module system in modern Node.js/Turborepo setups.
+        "moduleResolution": "NodeNext", // Matches the module system in modern Node.js/Turborepo setups.
+        "target": "ES2022", // Or a modern target appropriate for your Node.js environment.
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "lib": [
+            "ES2022"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ], // Include all source files in the `src` directory.
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
